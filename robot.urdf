@@ -29,7 +29,7 @@
 
     <link name="body">
         <visual>
-            <origin xyz="0.0 -0.10159999999999994036 0.09525000000000001521"
+            <origin xyz="0.0 -0.1016 0.09525"
                 rpy="-1.570796326794896558 -1.570796326794896558 0" />
             <geometry>
                 <mesh filename="package:///body.stl" />
@@ -40,7 +40,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0.0 -0.10159999999999994036 0.09525000000000001521"
+            <origin xyz="0.0 -0.1016 0.09525"
                 rpy="-1.570796326794896558 -1.570796326794896558 0" />
             <geometry>
                 <mesh filename="package:///body.stl" />
@@ -68,7 +68,7 @@
 
     <link name="sleeve">
         <visual>
-            <origin xyz="0 0.0 -0.076200000000000017719"
+            <origin xyz="0 0.0 -0.0762"
                 rpy="-1.570796326794896558 -0 0" />
             <geometry>
                 <mesh filename="package:///sleeve.stl" />
@@ -79,7 +79,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0 0.0 -0.076200000000000017719"
+            <origin xyz="0 0.0 -0.0762"
                 rpy="-1.570796326794896558 -0 0" />
             <geometry>
                 <mesh filename="package:///sleeve.stl" />
@@ -124,7 +124,7 @@
     </link>
 
     <joint name="cyl_z" type="prismatic">
-        <origin xyz="0 -0.063500000000000000888 -0.076200000000000017719"
+        <origin xyz="0 -0.0635 -0.0762"
             rpy="1.570796326794896558 -0 0" />
         <parent link="sleeve" />
         <child link="pogo" />
