@@ -29,7 +29,7 @@
 
     <link name="body">
         <visual>
-            <origin xyz="-6.9388939039072283776e-18 -0.10159999999999994036 0.09525000000000001521"
+            <origin xyz="0.0 -0.10159999999999994036 0.09525000000000001521"
                 rpy="-1.570796326794896558 -1.570796326794896558 0" />
             <geometry>
                 <mesh filename="package:///body.stl" />
@@ -40,7 +40,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="-6.9388939039072283776e-18 -0.10159999999999994036 0.09525000000000001521"
+            <origin xyz="0.0 -0.10159999999999994036 0.09525000000000001521"
                 rpy="-1.570796326794896558 -1.570796326794896558 0" />
             <geometry>
                 <mesh filename="package:///body.stl" />
@@ -68,7 +68,7 @@
 
     <link name="sleeve">
         <visual>
-            <origin xyz="0 -3.4694469519536141888e-18 -0.076200000000000017719"
+            <origin xyz="0 0.0 -0.076200000000000017719"
                 rpy="-1.570796326794896558 -0 0" />
             <geometry>
                 <mesh filename="package:///sleeve.stl" />
@@ -79,7 +79,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0 -3.4694469519536141888e-18 -0.076200000000000017719"
+            <origin xyz="0 0.0 -0.076200000000000017719"
                 rpy="-1.570796326794896558 -0 0" />
             <geometry>
                 <mesh filename="package:///sleeve.stl" />
@@ -87,7 +87,7 @@
         </collision>
         <inertial>
             <origin
-                xyz="-1.278090274607719524e-08 7.890502696409230085e-09 -0.060135671624197417628"
+                xyz="0.0 0.0 -0.060135671624197417628"
                 rpy="0 0 0" />
             <mass value="0.4777148575757113047" />
             <inertia ixx="0.00098751957755369027328" ixy="1.8087162374182167824e-10"
@@ -98,7 +98,7 @@
 
     <link name="pogo">
         <visual>
-            <origin xyz="0 3.4694469519536141888e-18 -0.91440000000000010161" rpy="0 -0 0" />
+            <origin xyz="0 0.0 -0.91440000000000010161" rpy="0 -0 0" />
             <geometry>
                 <mesh filename="package:///pogo.stl" />
             </geometry>
@@ -108,14 +108,14 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0 3.4694469519536141888e-18 -0.91440000000000010161" rpy="0 -0 0" />
+            <origin xyz="0 0.0 -0.91440000000000010161" rpy="0 -0 0" />
             <geometry>
                 <mesh filename="package:///pogo.stl" />
             </geometry>
         </collision>
         <inertial>
             <origin
-                xyz="4.3194544932116136525e-19 4.6359230281414684632e-18 -0.45403610139860128836"
+                xyz="4.3194544932116136525e-19 0.0 -0.45403610139860128836"
                 rpy="0 0 0" />
             <mass value="1.0890939243757413735" />
             <inertia ixx="0.074944292622089278555" ixy="0" ixz="0" iyy="0.074944292622089278555"
@@ -123,7 +123,7 @@
         </inertial>
     </link>
 
-    <joint name="cyl_z" type="revolute">
+    <joint name="cyl_z" type="prismatic">
         <origin xyz="0 -0.063500000000000000888 -0.076200000000000017719"
             rpy="1.570796326794896558 -0 0" />
         <parent link="sleeve" />
