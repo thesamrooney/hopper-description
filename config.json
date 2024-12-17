@@ -1,0 +1,16 @@
+{
+    "documentId": "ef002e24db1c39acc14a437f",
+    "outputFormat": "urdf",
+    "drawFrames": false,
+    "drawCollisions": false,
+    "useScads": false,
+    "noDynamics": false,
+    "mergeSTLs": "no",
+    "simplifySTLs": "no",
+
+    "jointMaxEffort": {
+        "default": 1.5,
+        "head_pitch": 0.5
+    },
+    "jointMaxVelocity": 22
+}
