@@ -2,7 +2,7 @@
     <link name="coupler">
         <visual>
             <origin xyz="0.0076185226336969169569 0.01602287057000122833 -0.026352584457783326949"
-                rpy="0 -0 0" />
+                rpy="0 0 0" />
             <geometry>
                 <mesh filename="package:///coupler.stl" />
             </geometry>
@@ -13,7 +13,7 @@
         </visual>
         <collision>
             <origin xyz="0.0076185226336969169569 0.01602287057000122833 -0.026352584457783326949"
-                rpy="0 -0 0" />
+                rpy="0 0 0" />
             <geometry>
                 <mesh filename="package:///coupler.stl" />
             </geometry>
@@ -58,7 +58,7 @@
 
     <joint name="rev_x" type="revolute">
         <origin xyz="0.0076185226336969169569 0.016022870570001249146 -0.026352584457783323479"
-            rpy="1.570796326794896558 -0 1.570796326794896558" />
+            rpy="1.570796326794896558 0 1.570796326794896558" />
         <parent link="coupler" />
         <child link="body" />
         <axis xyz="0 0 1" />
@@ -69,7 +69,7 @@
     <link name="sleeve">
         <visual>
             <origin xyz="0 0.0 -0.0762"
-                rpy="-1.570796326794896558 -0 0" />
+                rpy="-1.570796326794896558 0 0" />
             <geometry>
                 <mesh filename="package:///sleeve.stl" />
             </geometry>
@@ -80,7 +80,7 @@
         </visual>
         <collision>
             <origin xyz="0 0.0 -0.0762"
-                rpy="-1.570796326794896558 -0 0" />
+                rpy="-1.570796326794896558 0 0" />
             <geometry>
                 <mesh filename="package:///sleeve.stl" />
             </geometry>
@@ -98,7 +98,7 @@
 
     <link name="pogo">
         <visual>
-            <origin xyz="0 0.0 -0.91440000000000010161" rpy="0 -0 0" />
+            <origin xyz="0 0.0 -0.91440000000000010161" rpy="0 0 0" />
             <geometry>
                 <mesh filename="package:///pogo.stl" />
             </geometry>
@@ -108,7 +108,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0 0.0 -0.91440000000000010161" rpy="0 -0 0" />
+            <origin xyz="0 0.0 -0.91440000000000010161" rpy="0 0 0" />
             <geometry>
                 <mesh filename="package:///pogo.stl" />
             </geometry>
@@ -125,7 +125,7 @@
 
     <joint name="cyl_z" type="prismatic">
         <origin xyz="0 -0.0635 -0.0762"
-            rpy="1.570796326794896558 -0 0" />
+            rpy="1.570796326794896558 0 0" />
         <parent link="sleeve" />
         <child link="pogo" />
         <axis xyz="0 0 1" />
@@ -135,7 +135,7 @@
 
     <joint name="rev_y" type="revolute">
         <origin xyz="0.10286852263369694604 0.092222870570001252988 -0.026352584457783316541"
-            rpy="-1.570796326794896558 -0 0" />
+            rpy="-1.570796326794896558 0 0" />
         <parent link="coupler" />
         <child link="sleeve" />
         <axis xyz="0 0 1" />
