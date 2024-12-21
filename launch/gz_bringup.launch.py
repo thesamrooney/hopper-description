@@ -62,48 +62,48 @@ def generate_launch_description():
         output="screen",
     )
 
-    gz_param_bridge = Node(
-        package='ros_gz_bridge',
-        executable='parameter_bridge',
-        parameters=[
-            {"config_file": os.path.join(
-                get_package_share_directory("hopper"),
-                "config",
-                "gz_bridge.config.yaml",
-            )}
-        ],
-        # remappings=[],
-        output='screen'
-    )
+    # gz_param_bridge = Node(
+    #     package='ros_gz_bridge',
+    #     executable='parameter_bridge',
+    #     parameters=[
+    #         {"config_file": os.path.join(
+    #             get_package_share_directory("hopper"),
+    #             "config",
+    #             "gz_bridge.config.yaml",
+    #         )}
+    #     ],
+    #     # remappings=[],
+    #     output='screen'
+    # )
 
-    twist_stamper = Node(
-        package='twist_stamper',
-        executable='twist_stamper',
-        parameters=[{'use_sim_time': True}],
-        remappings=[('/cmd_vel_in','/luna_cont/cmd_vel_unstamped'),
-                    ('/cmd_vel_out','/luna_cont/cmd_vel')],
-    )
+    # twist_stamper = Node(
+    #     package='twist_stamper',
+    #     executable='twist_stamper',
+    #     parameters=[{'use_sim_time': True}],
+    #     remappings=[('/cmd_vel_in','/hopper_cont/cmd_vel_unstamped'),
+    #                 ('/cmd_vel_out','/hopper_cont/cmd_vel')],
+    # )
 
-    controller_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["luna_cont", "joint_broad"],
-    )
+    # controller_spawner = Node(
+    #     package="controller_manager",
+    #     executable="spawner",
+    #     arguments=["hopper_cont", "joint_broad"],
+    # )
 
     # DEFINE ACTIONS
 
     # we have to have a delay here because it takes a long time to load the world
-    actions_after_world_loads = TimerAction(
-        period=5.0,
-        actions=[
-            controller_spawner
-        ]
-    )
+    # actions_after_world_loads = TimerAction(
+    #     period=5.0,
+    #     actions=[
+    #         controller_spawner
+    #     ]
+    # )
 
 
     return LaunchDescription([
         rsp,
-        twist_stamper,
+        # twist_stamper,
         gz_sim,
         gz_create_robot,
         # gz_param_bridge,
