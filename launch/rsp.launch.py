@@ -17,7 +17,7 @@ def generate_launch_description():
 
     # Process the URDF file
     xacro_file = os.path.join(
-        get_package_share_directory('hopper'),
+        get_package_share_directory('hopper-description'),
         'description',
         'robot.urdf.xacro',
     )

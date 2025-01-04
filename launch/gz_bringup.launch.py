@@ -10,7 +10,7 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
 
-    package_name = "hopper"
+    package_name = "hopper-description"
 
     ### DECLARE LAUNCH ARGUMENTS
 
@@ -20,7 +20,7 @@ def generate_launch_description():
 
     # Create the robot state publisher
     rsp_source = PythonLaunchDescriptionSource(os.path.join(
-        get_package_share_directory("hopper"),
+        get_package_share_directory("hopper-description"),
         "launch",
         "rsp.launch.py"
     ))

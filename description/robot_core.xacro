@@ -7,19 +7,19 @@
     
     </link>
 
-    <!-- BODY LINK -->
-
     <joint name="body_joint" type="fixed">
         <parent link="base_link" />
-        <child link="body" />
-        <origin xyz="0.0 0.0 0.0" rpy="0 0 1.57079632679489" />
+        <child link="coupler" />
+        <origin xyz="0.0 0.0 1.0" rpy="0 0 1.57079632679489" />
     </joint>
+
+    <!-- BODY LINK -->
 
     <link name="body">
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package:///body.stl" />
+                <mesh filename="package://hopper-description/stl/body.stl" />
             </geometry>
             <material name="body_material">
                 <color
@@ -29,7 +29,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package:///body.stl" />
+                <mesh filename="package://hopper-description/stl/body.stl" />
             </geometry>
         </collision>
         <inertial>
@@ -48,7 +48,7 @@
             <origin xyz="-2.0816681711721685133e-17 0 0.0063499999999999945377"
                 rpy="1.570796326794896558 1.570796326794896558 0" />
             <geometry>
-                <mesh filename="package:///coupler.stl" />
+                <mesh filename="package://hopper-description/stl/coupler.stl" />
             </geometry>
             <material name="coupler_material">
                 <color
@@ -59,7 +59,7 @@
             <origin xyz="-2.0816681711721685133e-17 0 0.0063499999999999945377"
                 rpy="1.570796326794896558 1.570796326794896558 0" />
             <geometry>
-                <mesh filename="package:///coupler.stl" />
+                <mesh filename="package://hopper-description/stl/coupler.stl" />
             </geometry>
         </collision>
         <inertial>
@@ -79,7 +79,7 @@
             <origin xyz="-3.0814879110195773649e-33 0 -0.076200000000000003841"
                 rpy="-1.570796326794896558 -0 0" />
             <geometry>
-                <mesh filename="package:///sleeve.stl" />
+                <mesh filename="package://hopper-description/stl/sleeve.stl" />
             </geometry>
             <material name="sleeve_material">
                 <color
@@ -90,7 +90,7 @@
             <origin xyz="-3.0814879110195773649e-33 0 -0.076200000000000003841"
                 rpy="-1.570796326794896558 -0 0" />
             <geometry>
-                <mesh filename="package:///sleeve.stl" />
+                <mesh filename="package://hopper-description/stl/sleeve.stl" />
             </geometry>
         </collision>
         <inertial>
@@ -110,7 +110,7 @@
         <visual>
             <origin xyz="0 -1.1664760761878542743e-18 -0.91440000000000010161" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package:///pogo.stl" />
+                <mesh filename="package://hopper-description/stl/pogo.stl" />
             </geometry>
             <material name="pogo_material">
                 <color
@@ -120,7 +120,7 @@
         <collision>
             <origin xyz="0 -1.1664760761878542743e-18 -0.91440000000000010161" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package:///pogo.stl" />
+                <mesh filename="package://hopper-description/stl/pogo.stl" />
             </geometry>
         </collision>
         <inertial>
